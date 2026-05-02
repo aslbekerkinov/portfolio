@@ -3,6 +3,7 @@ const CountryList = () => {
     const [countries, setCountries] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [select, setSearch]=useState(false);
 
     const API_URL = 'https://restcountries.com/v3.1/all?fields=name,capital,currencies,continents,borders,flags,languages,population,region';
 
@@ -33,9 +34,10 @@ const CountryList = () => {
     if (error) return <h2 style={{ color: 'red', textAlign: 'center', marginTop: '50px' }}>Xato: {error}</h2>;
 
     return (
+        
         <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
             <h1 style={{ textAlign: 'center', marginBottom: '30px' }}>Davlat Ma'lumotlari</h1>
-
+            {/* <input type="text"onChange={ (e)=> setSearch(e.target.value)} /> */}
             <div style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',

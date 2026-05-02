@@ -13,7 +13,7 @@ function App() {
   return(
     
     <BrowserRouter>
-    <nav style={{padding:'20px',background:'#eee', margin:'15px' , marginTop:'0px'}} >
+    <nav style={{padding:'20px',background:'#eee', margin:'15px' , marginTop:'0px',gap:'100px'}} >
       <Link to="/Homepage" style={{textDecoration:'none',marginRight:'10px'}}>Bosh sahifa</Link>
       <Link to="/About" style={{marginRight:'10px',textDecoration:'none'}}>My project</Link>
       <Link to="/" style={{marginRight:'10px',textDecoration:'none'}}>Men haqimda</Link>

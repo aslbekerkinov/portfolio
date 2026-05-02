@@ -19,7 +19,7 @@ function HomePage(){
             </div>
              <div style={{gap:'20px',justifyContent:'center'}}>
             <h1 style={{height:'50px',}} id='men2'> Men Erkinov Aslbek</h1>
-            <h3><img src={Rasm5} style={{width:'20px'}} /> fueled by Futboll</h3>
+            <h3>⚽ fueled by Futboll</h3>
             <h3>🌍 based in the Uzbekistan</h3>
             <h3>💼 frontend developer</h3>
             <h3>📧 aslbekerkinov15@gmail.com</h3>

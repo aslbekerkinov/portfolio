@@ -1,7 +1,7 @@
 import '../styles/contact.css'
 function Cuntact(){
     return(
-        <div className="c_main">
+        <div id='cantact'>
         <h1>Aloqa</h1>
       <p>Agar men bilan bog'lanmoqchi bo'lsangiz:</p>
       <ul>

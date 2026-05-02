@@ -1,5 +1,77 @@
-#app{
+/* #app{
    font-family: fantasy;  
    font-size: 20px;
-   box-shadow: 0 20px 30px aqua;
-}  
+   box-shadow: 10px 0px 60px aqua;
+}   */
+   #app {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 24px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+#app h1 {
+    font-size: 2.8rem;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    text-align: center;
+    background: linear-gradient(45deg, #6c5ce7, #a29bfe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#app p {
+    color: #4a4a4a;
+    font-size: 1.15rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#app h3 {
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    color: #2d3436;
+    margin-top: 30px;
+    border-left: 5px solid #6c5ce7;
+    padding-left: 15px;
+}
+
+/* Ko'nikmalar ro'yxati (Skills) */
+#app ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+#app li {
+    background: #f1f2f6;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    color: #6c5ce7;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+#app li:hover {
+    background: #6c5ce7;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Qiziqishlar qismi */
+.interests-box {
+    background: #f9f9ff;
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 10px;
+    border-right: 5px solid #a29bfe;
+}

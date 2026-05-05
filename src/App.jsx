@@ -4,6 +4,7 @@ import Quote from './QouteApp'
 import About from './pages/about'
 import Cuntact from './pages/contact'
 import CoutryList from './pages/Api'
+import CurrencyConverter from './pages/Canvertor'
 // import QuoteCard from './QouteCard.jsx'
 function App() {
   // const About= () => <h2>Project</h2>
@@ -19,7 +20,7 @@ function App() {
       <Link to="/" style={{marginRight:'10px',textDecoration:'none'}}>Men haqimda</Link>
       <Link to="/contact" style={{marginRight:'10px',textDecoration:'none'}} >Aloqa</Link>
       <Link to="/country" style={{marginRight:'10px',textDecoration:'none'}} >Davlatlar</Link>
-
+       <Link to="/CurrencyConverter" style={{marginRight:'10px',textDecoration:'none'}} >Valyutalar</Link>
      </nav>
 <div style={{padding:'20px'}}>
   <Routes>
@@ -28,6 +29,7 @@ function App() {
     <Route path="/contact" element={<Cuntact />} />
     <Route path="/Homepage" element={<HomePage />} />
     <Route path="/country" element={<CoutryList />} />
+    <Route path="/CurrencyConverter" element={<CurrencyConverter />} />
   </Routes>
 </div>
     </BrowserRouter>

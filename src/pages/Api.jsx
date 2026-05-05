@@ -36,7 +36,7 @@ const CountryList = () => {
     return (
         
         <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
-            <h1 style={{ textAlign: 'center', marginBottom: '30px' }}>Davlat Ma'lumotlari</h1>
+            <h1 style={{ textAlign: 'center', marginBottom: '30px',height:'70px'}}>Davlat Ma'lumotlari</h1>
             {/* <input type="text"onChange={ (e)=> setSearch(e.target.value)} /> */}
             <div style={{
                 display: 'grid',
@@ -61,10 +61,10 @@ const CountryList = () => {
                             alt={country.name.common}
                             style={{ width: '100%', height: '150px', objectFit: 'cover', borderRadius: '5px' }}
                         />
-                        <h3 style={{ margin: '15px 0 10px' }}>{country.name.common}</h3>
-                        <p style={{ margin: '5px 0' }}><strong>Poytaxti:</strong> {country.capital ? country.capital[0] : 'Mavjud emas'}</p>
-                        <p style={{ margin: '5px 0' }}><strong>Mintaqa:</strong> {country.region}</p>
-                        <p style={{ margin: '5px 0' }}><strong>Aholi:</strong> {country.population.toLocaleString()} kishi</p>
+                        <h3 style={{ margin:'15px 0 10px' }}>{country.name.common}</h3>
+                        <p style={{ margin:'5px 0'}}><strong>Poytaxti:</strong> {country.capital ? country.capital[0] : 'Mavjud emas'}</p>
+                        <p style={{ margin:'5px 0'}}><strong>Mintaqa:</strong> {country.region}</p>
+                        <p style={{ margin:'5px 0'}}><strong>Aholi:</strong> {country.population.toLocaleString()} kishi</p>
                     </div>
                 ))}
             </div>

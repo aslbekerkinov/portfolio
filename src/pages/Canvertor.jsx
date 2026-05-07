@@ -7,13 +7,14 @@ function CurrencyConverter(){
     const [fromCurrency,setFromCurrency]=useState('USD');
     const [toCurrency,setToCurrency]=useState('UZD');
     const [result,setResult]=useState(0);
-
     useEffect(()=>{
         const fetchRetes = async()=>{
             try{
                 const response=await axios.get('https://cbu.uz/uz/arkhiv-kursov-valyut/json/')
                 const uzs ={Ccy:'UZS',Rate:'1', CcyNm_UZ:"Ozbek so'mi" };
-                setRetes([uzs, ...response.data]);
+                const bit ={Ccy:'BTC',Rate:'86547', CcyNm_UZ:"bitcon"}
+
+                setRetes([uzs,bit, ...response.data]);
             }catch(error){
                 console.log("Xatolik:",error);
             }
@@ -27,7 +28,7 @@ function CurrencyConverter(){
         if(retes.length >0){
             const fromRate=retes.find(r=> r.Ccy=== fromCurrency)?.Rate;
             const toRate = retes.find(r=> r.Ccy=== toCurrency)?.Rate;
-
+ 
             const calc =(amout*fromRate)/toRate;
             setResult(calc.toFixed(2));
         }

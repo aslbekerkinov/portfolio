@@ -7,7 +7,7 @@ function Cuntact(){
       <ul>
         <li>📧 Email: aslbekerkinov15@gmail.com</li>
         <li>📱 Telefon: +998 97 874 5111</li>
-        <li>💬 Telegram: @ercinov1</li>
+        <li>💬 Telegram: @erciinov</li>
       </ul>
     </div>
     )

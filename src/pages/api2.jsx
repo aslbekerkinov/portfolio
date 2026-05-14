@@ -14,7 +14,7 @@ function MovieSearch(){
         if(!query)return;
         setLoading(true);
         try{
-            const response=await axios.get(`https://www,omdbapi.com/?s=${query}&apikey=${API_KEY}`)
+            const response=await axios.get(`https://www.omdbapi.com/?s=${query}&apikey=${API_KEY}`)
             setMovies(response.data.Search || [])
         }catch(error){
             console.log(error)
@@ -23,14 +23,14 @@ function MovieSearch(){
     };
     const getMovieDetails=async (id)=>{
         try{
-            const response= await axios.get(`https://www,omdbapi.com/?s=${id}&apikey=${API_KEY}`)
+            const response= await axios.get(`https://www.omdbapi.com/?s=${id}&apikey=${API_KEY}`)
             searchMovie(response.data);
         }catch(error){
             console.log(error)
         }
     };
     return(
-        <div style={{padding:'20px',fontFamily:'Arial'}}>
+        <div style={{padding:'20px',fontFamily:'Arial',borderRadius:'30px',boxShadow:'0 0 10px blue'}}>
             <h2 style={{textAlign:'center'}}> Kino portali</h2>
             <form onSubmit={searchMovie}style={{display:'flex',gap:'10px',marginBottom:'30px',justifyContent:'center'}}>
                 <input 

@@ -93,7 +93,7 @@ function MovieSearch(){
                             </div>
                         </div>
                     </div>
-                )}
+                )};
             </div>  
         </div>
     )

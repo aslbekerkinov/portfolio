@@ -6,6 +6,7 @@ import Cuntact from './pages/contact'
 import CoutryList from './pages/Api'
 import CurrencyConverter from './pages/Canvertor'
 import MovieSearch from './pages/api2'
+import LiveInput from './pages/live'
 // import QuoteCard from './QouteCard.jsx'
 function App() {
   // const About= () => <h2>Project</h2>
@@ -23,6 +24,7 @@ function App() {
       <Link to="/country" style={{marginRight:'10px',textDecoration:'none'}} >Davlatlar</Link>
        <Link to="/CurrencyConverter" style={{marginRight:'10px',textDecoration:'none'}} >Valyutalar</Link>
       <Link to="/moviesearch" style={{marginRight:'10px',textDecoration:'none'}} >Movie </Link>
+      <Link to="/live" style={{marginRight:'10px',textDecoration:'none'}} >LiveInput </Link>
 
      </nav>
 <div style={{padding:'20px'}}>
@@ -34,6 +36,7 @@ function App() {
     <Route path="/country" element={<CoutryList />} />
     <Route path="/CurrencyConverter" element={<CurrencyConverter />} />
     <Route path="/moviesearch" element={<MovieSearch />} />
+    <Route path="/live" element={<LiveInput />} />
 
   </Routes>
 </div>

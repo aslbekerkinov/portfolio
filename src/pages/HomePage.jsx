@@ -31,6 +31,7 @@ function HomePage(){
                     <img src={Rasm11} style={{width:'40px'}}></img>  
                 </div> 
              </div> 
+             
     )
 }
 export default HomePage;

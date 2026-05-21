@@ -28,6 +28,7 @@ import { useState,useEffect } from 'react'
   getNewQoute();
 
  },[]);
+ 
 //  useEffect(()=>{
 //   if(quote){
 //   const ranglar=['#1abc9c','#e74c3c','#9b59b6','#f1c40f','#e67e22','#e74c3c']

@@ -1,4 +1,3 @@
-// LiveInput.jsx
 import { useState } from 'react';
 
 function LiveInput() {

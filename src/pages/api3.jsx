@@ -7,34 +7,38 @@ function Translator() {
   const [sourceLang, setSourceLang] = useState('en'); // Qaysi tildan
   const [targetLang, setTargetLang] = useState('ru'); // Qaysi tilga
   const [loading, setLoading] = useState(false);
-
+  const [sinonim, setSinonim]=useState('');
+  const [sinonim2, setSinonim2]=useState('');
+  const[status ,setStatus]=useState('');
   const handleTranslate = async () => {
     if (!text) return;  
     setLoading(true);
     setTranslatedText(''); 
 
     try {
-      // TUZATILDI: Oddiy tirnoq o'rniga backtick (``) ishlatildi
       const response = await axios.get('https://api.mymemory.translated.net/get', {
         params: {
-          q: text,
+          q: text,  
           langpair: `${sourceLang}|${targetLang}`
         }
       });
-
+      //https://api.mymemory.translated.net/get?q=hello&langpair=en|ru
       if (response.data && response.data.responseData) {
         setTranslatedText(response.data.responseData.translatedText);
+        setSinonim(response.data.matches[1].translation);
+        setSinonim2(response.data.matches[2].translation)
+        setStatus(response.data.responseData.responseStatus);
+      
       } else {
         alert("Tarjima topilmadi.");
       }
-    } catch (error) {
-      console.error("Xatolik tafsiloti:", error);
-      alert("Xatolik yuz berdi. Internet aloqasini tekshiring.");
+    } catch (err) {
+      console.error("Xatolik tafsiloti:", err);
+       alert("Xatolik yuz berdi. Internet aloqasini tekshiring.");
     }
     setLoading(false);
   };
 
-  // Tillar va matnlarni o'zaro almashtirish (Swap)
   const handleSwap = () => {
     setSourceLang(targetLang);
     setTargetLang(sourceLang);
@@ -50,7 +54,6 @@ function Translator() {
     }}>
       <h2 style={{ textAlign: 'center', marginBottom: '20px', color: '#2c3e50' }}>🌐 Kafolatlanmagan Tarjimon</h2>
 
-      {/* Tillarni tanlash bo'limi */}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: '10px', marginBottom: '20px' }}>
         <select 
           value={sourceLang} 
@@ -86,7 +89,6 @@ function Translator() {
         </select>
       </div>
 
-      {/* Matn kiritish oynasi */}
       <div style={{ marginBottom: '20px' }}>
         <textarea
           rows="5"
@@ -96,8 +98,6 @@ function Translator() {
           style={{ width: '100%', padding: '12px', borderRadius: '8px', border: '1px solid #ccc', fontSize: '16px', resize: 'none', boxSizing: 'border-box' }}
         />
       </div>
-
-      {/* TUZATILDI: Tarjima qilish tugmasining disabled va style qismi to'g'rilandi */}
       <button 
         onClick={handleTranslate}
         disabled={loading}
@@ -121,11 +121,16 @@ function Translator() {
       {translatedText && (
         <div style={{ 
           marginTop: '25px', padding: '15px', backgroundColor: '#f8f9fa', 
-          borderRadius: '8px', borderLeft: '5px solid #9b59b6'
+          borderRadius: '8px', borderLeft: '5px solid #34495e'
         }}>
           <h4 style={{ margin: '0 0 10px 0', color: '#34495e' }}>Tarjimasi:</h4>
           <p style={{ fontSize: '18px', margin: 0, whiteSpace: 'pre-wrap', lineHeight: '1.5' }}>
           {translatedText}</p>
+          <p>
+            <small>{sinonim}</small>
+            <small>, {sinonim2}</small>
+            <small>{status}</small>
+          </p> 
         </div>
       )}
     </div>

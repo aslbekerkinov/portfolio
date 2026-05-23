@@ -8,6 +8,7 @@ import CurrencyConverter from './pages/Canvertor'
 import MovieSearch from './pages/api2'
 import LiveInput from './pages/live'
 import Traslete from'./pages/api3'
+import Books from './pages/books'
 function App() {
   return(   
     <BrowserRouter>
@@ -21,6 +22,8 @@ function App() {
       <Link to="/moviesearch" style={{marginRight:'10px',textDecoration:'none'}} >Movie </Link>
       <Link to="/live" style={{marginRight:'10px',textDecoration:'none'}} >LiveInput </Link>
      <Link to="/traslete" style={{marginRight:'10px',textDecoration:'none'}} >Traslete </Link>
+     <Link to="/book" style={{marginRight:'10px',textDecoration:'none'}} >Books search </Link>
+
      </nav>
 <div style={{padding:'20px'}}>
   <Routes>
@@ -33,6 +36,7 @@ function App() {
     <Route path="/moviesearch" element={<MovieSearch />} />
     <Route path="/live" element={<LiveInput />} />
     <Route path="/traslete" element={<Traslete />} />
+    <Route path="/book" element={<Books />} />
   </Routes>
 </div>
     </BrowserRouter>

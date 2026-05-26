@@ -11,5 +11,11 @@
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 10px;
-    background-color: #f9f9f9;
+}
+#img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 300px;
 }

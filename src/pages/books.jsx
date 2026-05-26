@@ -44,7 +44,8 @@ function Books() {
             <ul id="ul">
                 {baza.map((item) => (
                     <li id="li" key={item.key}> 
-                        <strong id="strong">{item.title}</strong> - {item.author_name?.join(', ') || `Muallif noma'lum`}
+                      <img  id='img'src={`https://covers.openlibrary.org/b/id/${item.cover_i}-M.jpg`} alt="" />
+                        <strong id="strong">{item.title}</strong> - {item.author_name?.join(', ') || `Muallif noma'lum`},  language - {item.language}
                     </li>
                 ))}
             </ul>

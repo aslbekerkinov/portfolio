@@ -9,6 +9,8 @@ import MovieSearch from './pages/api2'
 import LiveInput from './pages/live'
 import Traslete from'./pages/api3'
 import Books from './pages/books'
+import cars from './pages/car'
+import CarSearch from './pages/car'
 function App() {
   return(   
     <BrowserRouter>
@@ -22,7 +24,8 @@ function App() {
       <Link to="/moviesearch" style={{marginRight:'10px',textDecoration:'none'}} >Movie </Link>
       <Link to="/live" style={{marginRight:'10px',textDecoration:'none'}} >LiveInput </Link>
      <Link to="/traslete" style={{marginRight:'10px',textDecoration:'none'}} >Traslete </Link>
-     <Link to="/book" style={{marginRight:'10px',textDecoration:'none'}} >Books search </Link>
+     <Link to="/book" style={{marginRight:'10px',textDecoration:'none'}} >Books </Link>
+     <Link to="/cars" style={{marginRight:'10px',textDecoration:'none'}} >cars </Link>
 
      </nav>
 <div style={{padding:'20px'}}>
@@ -37,6 +40,8 @@ function App() {
     <Route path="/live" element={<LiveInput />} />
     <Route path="/traslete" element={<Traslete />} />
     <Route path="/book" element={<Books />} />
+   <Route path="/cars" element={<CarSearch />} />
+
   </Routes>
 </div>
     </BrowserRouter>

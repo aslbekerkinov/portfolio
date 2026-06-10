@@ -63,7 +63,7 @@ function Chat() {
                         onChange={(e) => setUser(e.target.value)}
                         required
                         style={{
-                            width: '90%', padding: '12px', borderRadius: '8px', border: '1px solid #cbd5e1', marginBottom: '15px', fontSize: '16px'
+                            width: '90%', padding: '12px', borderRadius: '8px', border: '1px solid #97a1ad', marginBottom: '15px', fontSize: '16px'
                         }}
                     />
                     <button type="submit" style={{
@@ -114,7 +114,7 @@ function Chat() {
 
             <form onSubmit={handleSendMessage} style={{
                 padding: '15px', backgroundColor: 'white', display: 'flex', gap: '10px',
-                borderTop: '1px solid #e2e8f0' 
+                borderTop: '1px solid #8d959e' 
             }}>
                 <input
                     type="text"

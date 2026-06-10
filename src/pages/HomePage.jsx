@@ -1,4 +1,4 @@
-import Rasm3 from'../assets/5397917646851870611.jpg'
+import Rasm3 from'../assets/5240232947690969821.jpg'
 import Rasm4 from'../assets/kasb.jpg'
 import Rasm5 from'../assets/top.jpg'
 import Rasm6 from'../assets/samolyot.jpg'

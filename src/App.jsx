@@ -26,7 +26,7 @@ function App() {
       <Link to="/live" style={{marginRight:'10px',textDecoration:'none'}} >LiveInput </Link>
      <Link to="/traslete" style={{marginRight:'10px',textDecoration:'none'}} >Traslete </Link>
      <Link to="/book" style={{marginRight:'10px',textDecoration:'none'}} >Books </Link>
-     <Link to="/chat" style={{marginRight:'10px',textDecoration:'none'}} >chat </Link>
+     <Link to="/chat" style={{marginRight:'10px',textDecoration:'none'}} >Chat </Link>
 
      </nav>
 <div style={{padding:'20px'}}>
